@@ -1,4 +1,5 @@
-import './App.css';
+import "./App.css";
+import Signup from "./Forms/Signup";
 import React, {useState} from 'react';
 import {Route, Link} from 'react-router-dom'
 import Login from './Components/Login/Login.js'
@@ -13,7 +14,6 @@ import Header from './Components/Header/Header';
     
   }
 
-
 function App() {
 
   const [formValues, setFormValues] = useState(initialFormValues)
@@ -24,7 +24,7 @@ function App() {
   }
   return (
     <div className="App">
-
+      <Signup />
       <Header/>
       <h1> HELLO </h1>
       <Route path="/login">
@@ -33,7 +33,6 @@ function App() {
         change={change}
          />
       </Route> 
-
     </div>
   );
 }
