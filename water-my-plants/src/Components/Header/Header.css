@@ -1,0 +1,6 @@
+.navbar nav {
+    display: flex;
+    justify-content:space-evenly;
+    width: auto;
+    border-bottom: 2px solid rgb(60, 55, 55)
+}
