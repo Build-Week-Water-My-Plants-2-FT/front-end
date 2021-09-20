@@ -12,6 +12,7 @@ export default function Signup() {
       <input type="text" value="" placeholder="Username" />
       <input type="number" value="" placeholder="Phone Number" />
       <input type="password" value="" placeholder="Password" />
+      <button>Sign Up</button>
     </div>
   );
 }
