@@ -6,12 +6,47 @@ import React from "react";
 //   password: "",
 // };
 
-export default function Signup() {
+export default function Signup (props) {
+  const { change, values } = props;
+
+  const onChange = (evt) => {
+    const { name, value } = evt.target;
+    change(name, value);
+    console.log(name, value);
+  };
+
+const onSubmit = evt => {
+  evt.preventDefault()
+  console.log("submitted Form!", );
+}
   return (
     <div>
-      <input type="text" value="" placeholder="Username" />
-      <input type="number" value="" placeholder="Phone Number" />
-      <input type="password" value="" placeholder="Password" />
+      <form onSubmit={onSubmit}>
+      <input 
+        type="text" 
+        name="username" 
+        value={values.username} 
+        onChange={onChange}
+        placeholder="Username" 
+        />
+      <input 
+      type="tel" 
+      name="phone" 
+      value={values.phone} 
+      onChange={onChange}
+      placeholder="Phone Number" 
+      />
+
+      <input 
+        type="password" 
+        name="password" 
+        value={values.password} 
+        onChange={onChange}
+        placeholder="Password" 
+        />
+
+      <button>Sign Up</button>
+      </form>
     </div>
   );
 }
