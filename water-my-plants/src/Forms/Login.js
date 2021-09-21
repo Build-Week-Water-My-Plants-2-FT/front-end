@@ -9,9 +9,14 @@ function Login(props) {
     console.log(name, value);
   };
 
+  const onSubmit = evt => {
+    evt.preventDefault()
+    console.log("submitted LogIn Form!", );
+  }
+
   return (
     <div>
-      <form>
+      <form onSubmit={onSubmit}>
         <input
           type="text"
           name="username"
@@ -32,6 +37,7 @@ function Login(props) {
           type="password"
           name="password"
           placeholder="Enter Password"
+          value={values.passoword}
           onChange={onChange}
           //i heard password shouldnt be stored in the frontend code, but i personally dont know how to do it, so im just using to test that it works :)
         />
