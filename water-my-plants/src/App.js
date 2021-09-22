@@ -1,7 +1,13 @@
 import "./App.css";
 import Signup from "./Forms/Signup";
 import React, { useState } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route, Link, Switch, Redirect } from "react-router-dom";
+
+import PlantList from './PlantList.js';
+import Plant from './Plant'
+
+import AddPlantForm from "./Forms/AddPlantForm";
+
 import Login from "./Forms/Login.js";
 import Header from "./Components/Header/Header";
 
@@ -27,12 +33,30 @@ function App() {
     <div className="App">
       <Header />
       <h1> HELLO </h1>
+
+      <Switch>
+
+      <Route path ='/plants/add'>
+        <AddPlantForm />
+      </Route>
+
+      <Route path = '/plants/:id'>
+        <Plant />
+      </Route>
+
+      <Route path = '/plants'>
+        <PlantList />
+      </Route>
+
       <Route path="/login">
         <Login values={formValues} change={change} />
       </Route>
+
       <Route path="/signup">
         <Signup values={formValues} change={change} submit={submit} />
       </Route>
+      
+      </Switch>
     </div>
   );
 }
