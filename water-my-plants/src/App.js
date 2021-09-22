@@ -1,10 +1,7 @@
 import "./App.css";
 import Signup from "./Forms/Signup";
 import React, { useState } from "react";
-import { Route, Link, Switch, Redirect } from "react-router-dom";
-
-import PlantList from './PlantList.js';
-import Plant from './Plant'
+import { Route } from "react-router-dom";
 
 import AddPlantForm from "./Forms/AddPlantForm";
 
@@ -16,7 +13,7 @@ import Header from "./Components/Header/Header";
 const initialFormValues = {
   username: "",
   phoneNumber: "",
-  password: ""
+  password: "",
 };
 
 function App() {
@@ -34,18 +31,8 @@ function App() {
       <Header />
       <h1> HELLO </h1>
 
-      <Switch>
-
-      <Route path ='/plants/add'>
+      <Route exact path ='/addplantform'>
         <AddPlantForm />
-      </Route>
-
-      <Route path = '/plants/:id'>
-        <Plant />
-      </Route>
-
-      <Route path = '/plants'>
-        <PlantList />
       </Route>
 
       <Route path="/login">
@@ -56,7 +43,6 @@ function App() {
         <Signup values={formValues} change={change} submit={submit} />
       </Route>
       
-      </Switch>
     </div>
   );
 }
