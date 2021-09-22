@@ -6,3 +6,41 @@
     background-color: transparent;
     color: red;
 }
+input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: rgb(184, 194, 191); 
+}
+input[type=tel] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: rgb(184, 194, 191);  
+}
+input[type=password] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: rgb(184, 194, 191);
+  }
+button {
+    height: 2rem;
+    width: 6rem;
+    font-size: 20px;
+    border-radius: 8px;
+    color: rgb(238, 240, 238);
+    background-color: #e7e7e7; 
+    color: black;
+    border: 2px solid rgb(30, 220, 20);
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
