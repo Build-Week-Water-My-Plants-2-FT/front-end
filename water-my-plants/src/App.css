@@ -11,6 +11,12 @@ a {
   border: 1px solid black;
   border-radius: 10px;
   padding: 1%;
+  width: 5%;
+}
+a:hover{
+  background-color: #224bc7;
+  color: white;
+  border-color: white;
 }
 h1 {
   padding: 15%;
