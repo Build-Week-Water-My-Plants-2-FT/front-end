@@ -9,10 +9,10 @@ function Login(props) {
     console.log(name, value);
   };
 
-  const onSubmit = evt => {
-    evt.preventDefault()
-    console.log("submitted LogIn Form!", );
-  }
+  const onSubmit = (evt) => {
+    evt.preventDefault();
+    console.log("submitted LogIn Form!");
+  };
 
   return (
     <div>
@@ -22,14 +22,6 @@ function Login(props) {
           name="username"
           placeholder="Enter Username"
           value={values.username}
-          onChange={onChange}
-        />
-
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Phone Number"
-          value={values.phone}
           onChange={onChange}
         />
 
