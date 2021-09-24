@@ -7,6 +7,7 @@ import AddPlantForm from "./Forms/AddPlantForm";
 
 import Login from "./Forms/Login.js";
 import Header from "./Components/Header/Header";
+import PrivateRoute from "./Components/PrivateRoute";
 
 //Initial States //
 ///////////////////
@@ -22,18 +23,18 @@ function App() {
   const change = (name, value) => {
     setFormValues({ ...formValues, [name]: value });
   };
-  
-  const submit = evt => {
-    evt.preventDefault()
-  }
+
+  const submit = (evt) => {
+    evt.preventDefault();
+  };
   return (
     <div className="App">
       <Header />
       <h1> HELLO </h1>
 
-      <Route exact path ='/addplantform'>
+      <PrivateRoute path="/addplantform">
         <AddPlantForm />
-      </Route>
+      </PrivateRoute>
 
       <Route path="/login">
         <Login values={formValues} change={change} />
@@ -42,7 +43,6 @@ function App() {
       <Route path="/signup">
         <Signup values={formValues} change={change} submit={submit} />
       </Route>
-      
     </div>
   );
 }
